@@ -42,10 +42,6 @@ export default class ProductPage {
         return await this.page.locator('[data-test="shopping-cart-badge"]').isVisible();
     }
 
-    async getSortButn(): Promise<Locator> {
-        return await this.page.locator('.product_sort_container');
-    }
-
     async selectSortOption(value: string): Promise<void> {
         const sortButton = this.page.locator('.product_sort_container');
         await sortButton.click();
