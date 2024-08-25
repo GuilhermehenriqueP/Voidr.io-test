@@ -16,7 +16,6 @@ export default class CartPage{
         await loginPage.makeLogin('standard_user', 'secret_sauce');
         await page.locator('[data-test="add-to-cart-sauce-labs-backpack"]').click();
         await page.locator('[data-test="shopping-cart-link"]').click();
-        return new CartPage(page);
     }
     async removeCartItem(){
         await this.page.locator('[data-test="remove-sauce-labs-backpack"]').click();

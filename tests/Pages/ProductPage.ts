@@ -13,7 +13,6 @@ export default class ProductPage {
     async navigate(page: Page) {
         const loginPage = new LoginPage(page);
         await loginPage.makeLogin('standard_user', 'secret_sauce');
-        return new ProductPage(page);
     }
 
     async clickAddProduct() {

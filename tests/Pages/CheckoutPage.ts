@@ -15,7 +15,6 @@ export default class CheckoutPage{
         await page.locator('[data-test="add-to-cart-sauce-labs-backpack"]').click();
         await page.locator('[data-test="shopping-cart-link"]').click();
         await page.locator('[data-test="checkout"]').click();
-        return new CheckoutPage(page);
     }
 
     async getErrorMessageCheckoutStepOne(): Promise<Locator>{
